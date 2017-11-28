@@ -91,9 +91,9 @@ foreach ($dir as $fileinfo) {
             $log->info("Pull-request Body:".$pullData["body"]);
 
             $ticketNumFromTitle = get_ticket_url($pullData["title"], $ticketPatterns);
-            $log->info("ticket num", $ticketNumFromTitle);
+            $log->info("Ticket num", $ticketNumFromTitle);
             $ticketNumFromBody = get_ticket_url($pullData["body"], $ticketPatterns);
-            $log->info("ticket num", $ticketNumFromBody);
+            $log->info("Ticket num", $ticketNumFromBody);
 
             $tickets = array_merge($ticketNumFromTitle, $ticketNumFromBody);
             $log->info("Tickets found", $tickets);
